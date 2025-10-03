@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Responsive Profile Card</title>
+  <style>
+    body {
+      background-color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    
+    .card {
+      background-color: white;
+      border-radius: 16px;
+      box-shadow: 0 6px 18px grey;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      width: 420px;
+      margin: auto;
+      overflow: hidden;
+    }
+
+   
+    .card img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin: 20px;
+      flex-shrink: 0;
+    }
+ 
+     .card img:hover {
+      box-shadow: 0 4px 12px rgb(42, 42, 42);
+    }
+
+    .card_info {
+      padding: 20px;
+      flex: 1;
+    }
+
+    .card_info h2 {
+      font-size: 1.8rem;
+      font-weight: bold;
+      margin-bottom: 8px;
+    }
+
+    .card_info p {
+      font-size: 0.95rem;
+      color: #555;
+      margin-bottom: 16px;
+    }
+
+    
+    .card_buttons {
+      display: flex;
+      gap: 12px;
+    }
+
+    .card_buttons a {
+      text-decoration: none;
+      background: blue;
+      color: #fff;
+      padding: 10px ;
+      border-radius: 8px;
+      font-size: 0.95rem;
+    }
+
+    .card_buttons a:hover {
+      background: rgb(176, 176, 228);
+    }
+
+  
+    @media (max-width: 640px) {
+      .card {
+        flex-direction: column;
+        width: 70vw;
+        text-align: center;
+      }
+
+      .card img {
+        width: 120px;
+        height: 120px;
+        margin: 20px auto 0;
+      }
+
+      .card_info {
+        padding: 15px;
+      }
+
+      .card_buttons {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .card_buttons a {
+        width: 90%;
+        margin: auto;
+        display: block;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <img src="https://img.freepik.com/premium-photo/drawn-portrait-handsome-guy-glasses-image-generated-by-ai_803126-1227.jpg" alt="Profile Picture">
+    <div class="card_info">
+      <h2>Manas Gandhi</h2>
+      <p>Frontend Developer passionate about building clean and user-friendly web applications.</p>
+      <div class="card_buttons">
+        <a href="#">Contact</a>
+        <a href="#">Portfolio</a>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
